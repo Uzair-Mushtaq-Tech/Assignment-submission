@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+</head>
+<body>
+    <button onclick="printGreeting()">Get Greeting</button>
+    <p id="greeting"></p>
+
+    <script>
+        function printGreeting() {
+            const now = new Date();
+            const currentHour = now.getHours();
+            let greeting;
+
+            if (currentHour < 12) {
+                greeting = "Good morning";
+            } else if (currentHour < 18) {
+                greeting = "Good afternoon";
+            } else {
+                greeting = "Good evening";
+            }
+
+            document.getElementById('greeting').innerHTML = greeting;
+        }
+    </script>
+</body>
+</html>
